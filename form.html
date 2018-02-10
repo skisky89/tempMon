@@ -1,0 +1,18 @@
+<html><body>
+<center>
+  <h2>Form</h2>
+  <p>Welcome, Current system DateTime is {{data.date}}.</p>
+
+  {% if data.filled %}
+    <p>Your content has been written to {{ data.file }}</p>
+  {% endif %}
+
+  <form action="{{ url_for('writetofile') }}" method=post>
+    <label>What do you want to write to the file?</lable>
+    <textarea name=content cols=60 rows=10 placeholder='Write here > Press submit'>
+    </textarea>
+
+    <input type=submit value='Lets Go!'>
+  </form> 
+</center>
+</html></body>
