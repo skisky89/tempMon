@@ -46,22 +46,21 @@ while (c < 1):
     temperaturecf = round(temperaturec * 1.8 + 32, 2)
 
     print (time1)
-    print (temperaturecf , " F")   #InsideNear=C
-    print (temperatureaf , " F")   #InsideFar =A
-    print (temperaturebf , " F")   #Outside   =B
-
+    print temperatureaf 'F'   #InsideFar =A
+    print temperaturebf 'F'   #Outside   =B
+    print temperaturecf 'F'   #InsideNear=C
+    
 #Convert to string
-    temperaturecf = str(temperaturecf)
     temperatureaf = str(temperatureaf)
     temperaturebf = str(temperaturebf)
-
+    temperaturecf = str(temperaturecf)
 #Write to file
-    fileOut = open("/var/www/html/check.txt", "w")
-    fileOut.write(temperaturecf)
-    fileOut.write("\n")
+    fileOut = open("/home/pi/tempMon/check.txt", "w")
     fileOut.write(temperatureaf)
     fileOut.write("\n")
     fileOut.write(temperaturebf)
+    fileOut.write("\n")
+    fileOut.write(temperaturecf)
     fileOut.write("\n")
     fileOut.close()
 
@@ -69,15 +68,12 @@ while (c < 1):
     log = open( timelog,"a")
     log.write(time1)
     log.write("\n")
-    log.write(temperaturecf)
-    log.write("\n")
     log.write(temperatureaf)
     log.write("\n")
     log.write(temperaturebf)
     log.write("\n")
+    log.write(temperaturecf)
+    log.write("\n")
     log.close()
     time.sleep(600)
     
-
-
-
