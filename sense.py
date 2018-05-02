@@ -46,9 +46,9 @@ while (c < 1):
     temperaturecf = round(temperaturec * 1.8 + 32, 2)
 
     print (time1)
-    print temperatureaf "F"   #InsideFar =A
-    print temperaturebf "F"   #Outside   =B
-    print temperaturecf "F"   #InsideNear=C
+    print (temperatureaf "F")   #InsideFar =A
+    print (temperaturebf "F")   #Outside   =B
+    print (temperaturecf "F")   #InsideNear=C
     
 #Convert to string
     temperatureaf = str(temperatureaf)
