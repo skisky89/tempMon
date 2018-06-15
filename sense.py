@@ -6,10 +6,10 @@ import time
 
 c = 0
 while (c < 1):
-    #5 mintute polling
+#Clockwork
     time1 = time.strftime("%I:%M:%S:- %m/%d/%Y")
     time1 = str(time1)
-    timelog = str(time.strftime("%m%d%Y.txt"))
+    timelog = str(time.strftime("/home/pi/tempMon/Dropbox-Uploader/tempData/%m%d%Y.txt"))
     
     
 #open sensor files (plug-&-play-driver created)
